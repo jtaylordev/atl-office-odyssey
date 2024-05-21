@@ -1,3 +1,4 @@
+import { Collision } from "matter";
 import { EventBus } from "../EventBus";
 import { Scene } from "phaser";
 
@@ -11,7 +12,7 @@ export class Game extends Scene {
     }
 
     preload() {
-        this.load.image("tiles", "../../assets/office-tileset.png");
+        this.load.image("fantasy", "../../assets/fantasy.bmp");
         this.load.tilemapTiledJSON(
           "office-map",
           "../../assets/office-map.json",
@@ -24,7 +25,12 @@ export class Game extends Scene {
 
     create() {
         const officeTilemap = this.make.tilemap({ key: "office-map" });
-        const tileset = officeTilemap.addTilesetImage("Floors", "tiles");
+        const tileset = officeTilemap.addTilesetImage("fantasy", "fantasy");
+
+        // officeTilemap.createLayer('floor', tileset);
+        // const wallsLayer = officeTilemap.createLayer('walls', tileset);
+        // wallsLayer?.setCollisionByProperty({ collides: true });
+
         for (let i = 0; i < officeTilemap.layers.length; i++) {
           const layer = officeTilemap.createLayer(i, tileset, 0, 0);
           layer.setScale(1); // Adjust scale if needed
@@ -43,7 +49,7 @@ export class Game extends Scene {
               id: "player",
               sprite: playerSprite,
               walkingAnimationMapping: 6,
-              startPosition: { x: 8, y: 8 },
+              startPosition: { x: 20, y: 40 },
             },
           ],
         };
