@@ -34,6 +34,10 @@ export class Preloader extends Scene
 
         this.load.image('logo', 'logo.png');
         this.load.image('star', 'star.png');
+        this.load.image('man', 'man.png')
+
+        this.load.image('tiles', 'indoor_tileset.png')
+        this.load.tilemapTiledJSON('dungeon', 'test.json')
     }
 
     create ()

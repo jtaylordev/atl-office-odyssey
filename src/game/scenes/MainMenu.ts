@@ -26,6 +26,9 @@ export class MainMenu extends Scene
             align: 'center'
         }).setOrigin(0.5).setDepth(100);
 
+        this.title.setInteractive();
+        this.title.on('pointerdown', this.changeScene, this)
+
         EventBus.emit('current-scene-ready', this);
     }
     
