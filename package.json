@@ -25,6 +25,7 @@
         "build": "vite build --config vite/config.prod.mjs"
     },
     "dependencies": {
+        "grid-engine": "^2.45.0",
         "phaser": "^3.80.1",
         "vue": "^3.4.27"
     },
