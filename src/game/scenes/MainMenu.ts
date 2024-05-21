@@ -20,7 +20,7 @@ export class MainMenu extends Scene
 
         this.logo = this.add.image(850, 300, 'logo').setDepth(100);
 
-        this.title = this.add.text(850, 460, 'Start Game', {
+        this.title = this.add.text(850, 500, 'Start Game', {
             fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
             stroke: '#000000', strokeThickness: 8,
             align: 'center'
