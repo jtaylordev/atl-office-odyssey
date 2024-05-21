@@ -28,7 +28,7 @@ export class Game extends Scene
 
         map.createLayer('Ground', tileset);
         const wallsLayer = map.createLayer('Walls', tileset);
-        wallsLayer.setCollisionByProperty({ collides: true })
+        wallsLayer?.setCollisionByProperty({ collides: true })
         const debugGraphics = this.add.graphics().setAlpha(0.7);
         wallsLayer?.renderDebug(debugGraphics, {
             tileColor: null,

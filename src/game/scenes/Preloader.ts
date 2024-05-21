@@ -38,6 +38,8 @@ export class Preloader extends Scene
 
         this.load.image('tiles', 'indoor_tileset.png')
         this.load.tilemapTiledJSON('dungeon', 'test.json')
+        // this.load.image('tiles', 'fantasy.png')
+        // this.load.tilemapTiledJSON('office', 'office-map.json')
     }
 
     create ()
